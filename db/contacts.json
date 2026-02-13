@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "name": "Alice Johnson",
+    "email": "alice.johnson@example.com",
+    "phone": "+380991234567"
+  },
+  {
+    "id": "2",
+    "name": "Bob Smith",
+    "email": "bob.smith@example.com",
+    "phone": "+380992345678"
+  },
+  {
+    "id": "3",
+    "name": "Charlie Brown",
+    "email": "charlie.brown@example.com",
+    "phone": "+380993456789"
+  },
+  {
+    "id": "4",
+    "name": "Diana Prince",
+    "email": "diana.prince@example.com",
+    "phone": "+380994567890"
+  },
+  {
+    "id": "5",
+    "name": "Ethan Hunt",
+    "email": "ethan.hunt@example.com",
+    "phone": "+380995678901"
+  }
+]
