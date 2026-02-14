@@ -1,14 +1,33 @@
-// app.js
 import express from "express";
+import morgan from "morgan";
+import cors from "cors";
 import contactsRouter from "./routes/contactsRouter.js";
 
 const app = express();
-app.use(express.json());
 
+// Middleware
+app.use(morgan("tiny"));       
+app.use(cors());           
+app.use(express.json());       
+
+// Основні маршрути
 app.use("/api/contacts", contactsRouter);
 
+// Обробник 404 для невідомих маршрутів
+app.use((req, res) => {
+  res.status(404).json({ message: "Route not found" });
+});
+
+// Обробник помилок
 app.use((err, req, res, next) => {
-  res.status(err.status || 500).json({ message: err.message });
+  const { status = 500, message = "Server error" } = err;
+  res.status(status).json({ message });
+});
+
+// Запуск сервера
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
 });
 
 export default app;
+
