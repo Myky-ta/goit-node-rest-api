@@ -4,7 +4,7 @@
   "description": "REST API для роботи з колекцією контактів",
   "main": "server.js",
   "type": "module",
- "scripts": {
+"scripts": {
   "start": "node app.js",
   "dev": "nodemon app.js"
 },
